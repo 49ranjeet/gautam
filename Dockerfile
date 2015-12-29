@@ -1,4 +1,4 @@
-FROM quintenk/jdk7-oracle
+FROM ubuntu:14.04
 
 MAINTAINER  "Ranjeet kumar"
 
