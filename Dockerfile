@@ -1,9 +1,12 @@
-FROM fedora:20
-MAINTAINER http://fedoraproject.org/wiki/Cloud
+FROM quintenk/jdk7-oracle
 
-RUN yum update -y &&  yum clean all
-RUN yum install -y docker-registry && yum clean all
-ADD run-registry.sh /opt/registry/run-registry.sh
-RUN chmod -v 755 /opt/registry/run-registry.sh
-CMD ["/opt/registry/run-registry.sh"]
-EXPOSE 5000
+MAINTAINER  "Ranjeet kumar"
+
+RUN apt-get -y install tomcat7
+
+RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/default/tomcat7
+
+EXPOSE 8080
+
+
+
