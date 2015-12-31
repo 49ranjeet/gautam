@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM java:7
 CMD["java", "-version"]
 
 
